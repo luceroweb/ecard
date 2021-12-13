@@ -1,7 +1,7 @@
 import coffee_and_slippers from '../images/coffee_and_slippers.webp';
 import '../App.css';
 
-function GreetingCard({ greeting, body, closing }) {
+function GreetingCard({ greeting, body, closing, setCustomize }) {
   return (
     <div className="App">
       <header className="App-header">
@@ -13,6 +13,7 @@ function GreetingCard({ greeting, body, closing }) {
         <p>{closing}</p>
         <button
           className="App-link"
+          onClick={() => setCustomize(true)}
         >
           Reshare This Card
         </button>
