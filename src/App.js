@@ -9,6 +9,7 @@ function App() {
   const [body, setBody] = useState('Have a comforting and joyous holliday!');
   const [closing, setClosing] = useState('Love, your son Juan');
   const [customize, setCustomize] = useState(false);
+  const [preview, setPreview] = useState(false);
 
   return (
     <>
@@ -22,12 +23,15 @@ function App() {
         setBody={setBody}
         closing={closing}
         setClosing={setClosing}
+        setPreview={setPreview}
+        setCustomize={setCustomize}
       />
       : <GreetingCard
         greeting={greeting}
         body={body}
         closing={closing}
         setCustomize={setCustomize}
+        preview={preview}
       />
     }
     </>
