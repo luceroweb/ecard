@@ -22,6 +22,7 @@ function GreetingCard({ greeting, body, closing, setCustomize, preview, setPrevi
             <button onClick={continueEditing}>
               Continue Editing
             </button>
+            <button>Send</button>
           </div>
           : <button
           className="App-link"
