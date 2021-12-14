@@ -6,7 +6,7 @@ import { useState } from 'react';
 function App() {
   const [email, setEmail] = useState('');
   const [greeting, setGreeting] = useState('Dear Mom,');
-  const [body, setBody] = useState('Have a comforting and joyous holliday!');
+  const [body, setBody] = useState('Have a comforting and joyous holiday!');
   const [closing, setClosing] = useState('Love, your son Juan');
   const [customize, setCustomize] = useState(false);
   const [preview, setPreview] = useState(false);
@@ -27,6 +27,7 @@ function App() {
         setCustomize={setCustomize}
       />
       : <GreetingCard
+        email={email}
         greeting={greeting}
         body={body}
         closing={closing}
