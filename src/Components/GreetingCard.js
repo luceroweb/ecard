@@ -30,20 +30,19 @@ function GreetingCard({ email, greeting, body, closing, setCustomize, preview, s
     <div className="App">
       <header className="App-header">
         <img src={coffee_and_slippers} className="App-logo" alt="coffee and slippers" />
-        <p>
+        <p className="script">
           {greeting}
         </p>
-        <p>{body}</p>
-        <p>{closing}</p>
+        <p className="script">{body}</p>
+        <p className="script">{closing}</p>
         {preview
-          ? <div>
+          ? <div className="buttons">
             <button onClick={continueEditing}>
               Continue Editing
             </button>
             <button onClick={sendEcard}>Send</button>
           </div>
           : <button
-          className="App-link"
           onClick={() => setCustomize(true)}
           >
             Reshare This Card

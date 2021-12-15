@@ -9,7 +9,7 @@ export default function CustomizeMessage({ email, setEmail, greeting, setGreetin
   }
 
   return(
-    <>
+    <div className="customize">
       <div className="instructions">
         <img src={coffee_and_slippers} alt="coffee and slippers" className="thumb" />
         <p><strong>How to Reshare:</strong><br />
@@ -18,7 +18,7 @@ export default function CustomizeMessage({ email, setEmail, greeting, setGreetin
       <form>
 
         <div>
-          <label htmlFor="email">Recipient Email</label><br />
+          <label htmlFor="email">Recipient Email</label>
           <input
             name="email"
             id="email"
@@ -30,7 +30,7 @@ export default function CustomizeMessage({ email, setEmail, greeting, setGreetin
         </div>
 
         <div>
-          <label htmlFor="greeting">Greeting</label><br />
+          <label htmlFor="greeting">Greeting</label>
           <input
             name="greeting"
             id="greeting"
@@ -42,7 +42,7 @@ export default function CustomizeMessage({ email, setEmail, greeting, setGreetin
         </div>
 
         <div>
-          <label htmlFor="body">Body</label><br />
+          <label htmlFor="body">Body</label>
           <textarea
             name="body"
             id="body"
@@ -55,7 +55,7 @@ export default function CustomizeMessage({ email, setEmail, greeting, setGreetin
         </div>
 
         <div>
-          <label htmlFor="closing">Closing</label><br />
+          <label htmlFor="closing">Closing</label>
           <input
             name="closing"
             id="closing"
@@ -69,6 +69,6 @@ export default function CustomizeMessage({ email, setEmail, greeting, setGreetin
         <button type="submit" onClick={onSubmit}>Preview Greeting Card</button>
 
       </form>
-    </>
+    </div>
   )
 }

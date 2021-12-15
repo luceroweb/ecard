@@ -19,14 +19,62 @@ body {
 } */
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.App-header .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+button {
+  display: block;
+  width: 100%;
+  background-color: rgb(0, 136, 199);
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.customize {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.customize form,
+.customize input,
+.customize label,
+.customize textarea {
+  width: 100%;
+}
+
+.customize label {
+  display: block;
+  padding-top: 10px;
+}
+
+.customize button {
+  display: block;
+  margin-top: 20px;
 }
 
 .App-link {
@@ -52,4 +100,9 @@ body {
 .thumb {
   width: 150px;
   height: auto;
+}
+
+.script {
+  font-family: 'Dancing Script', cursive;
+  font-size: 35px;
 }
