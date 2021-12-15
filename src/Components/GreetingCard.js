@@ -23,8 +23,6 @@ function GreetingCard({ email, greeting, body, closing, setCustomize, preview, s
 
     mailto += encodeURIComponent(url);
 
-    console.log(mailto);
-
     window.open(mailto);
   }
 

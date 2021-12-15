@@ -4,10 +4,11 @@ import CustomizeMessage from './Components/CustomizeMessage';
 import { useState } from 'react';
 
 function App() {
+  const query = new URLSearchParams(window.location.search);
   const [email, setEmail] = useState('');
-  const [greeting, setGreeting] = useState('Dear Mom,');
-  const [body, setBody] = useState('Have a comforting and joyous holiday!');
-  const [closing, setClosing] = useState('Love, your son Juan');
+  const [importedGreeting, setImportedGreeting] = useState(query.get("greeting") || 'Dear Mom,');
+  const [importedBody, setImportedBody] = useState(query.get("body") || 'Have a comforting and joyous holiday!');
+  const [importedClosing, setImportedClosing] = useState(query.get("closing") || 'Love, your son Juan');
   const [customize, setCustomize] = useState(false);
   const [preview, setPreview] = useState(false);
 
@@ -17,20 +18,20 @@ function App() {
       ? <CustomizeMessage
         email={email}
         setEmail={setEmail}
-        greeting={greeting}
-        setGreeting={setGreeting}
-        body={body}
-        setBody={setBody}
-        closing={closing}
-        setClosing={setClosing}
+        greeting={importedGreeting}
+        setGreeting={setImportedGreeting}
+        body={importedBody}
+        setBody={setImportedBody}
+        closing={importedClosing}
+        setClosing={setImportedClosing}
         setPreview={setPreview}
         setCustomize={setCustomize}
       />
       : <GreetingCard
         email={email}
-        greeting={greeting}
-        body={body}
-        closing={closing}
+        greeting={importedGreeting}
+        body={importedBody}
+        closing={importedClosing}
         setCustomize={setCustomize}
         preview={preview}
         setPreview={setPreview}
